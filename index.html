@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cricket Game</title>
+ <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h1><strong>Bat Ball Stump Game</strong></h1>
+<br>
+
+<button class="bat" onclick="{
+  const randomNumber = Math.random() * 3;
+  let computerchoose;
+  let result;
+  if (randomNumber <= 1) {
+    computerchoose = 'Bat';
+  } else if (randomNumber <= 2) {
+    computerchoose = 'Ball';
+  } else {
+    computerchoose = 'Stump';
+  }
+  if (computerchoose === 'Ball') {
+    result = 'USER IS WINNER';
+  } else if (computerchoose === 'Bat') {
+    result = 'IT\'S A TIE';
+  } else {
+    result = 'COMPUTER IS WINNER';
+  }
+  document.querySelector('#result').textContent = 
+  'You chose Bat.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
+
+
+
+  // alert('You chose Bat.\nComputer chose: ' + computerchoose + '\nResult: ' + result);
+}">Bat</button>
+
+<button class="ball" onclick="{
+  const randomNumber = Math.random() * 3;
+  let computerchoose;
+  let result;
+  if (randomNumber <= 1) {
+    computerchoose = 'Bat';
+  } else if (randomNumber <= 2) {
+    computerchoose = 'Ball';
+  } else {
+    computerchoose = 'Stump';
+  }
+  if (computerchoose === 'Ball') {
+    result = 'IT\'S A TIE';
+  } else if (computerchoose === 'Bat') {
+    result = 'COMPUTER IS WINNER';
+  } else {
+    result = 'USER IS WINNER';
+  }
+document.querySelector('#result').textContent = 
+  'You chose Ball.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
+
+
+
+
+
+  // alert('You chose Ball.\nComputer chose: ' + computerchoose + '\nResult: ' + result);
+ }">Ball</button>
+
+<button class="stump" onclick="{
+  const randomNumber = Math.random() * 3;
+  let computerchoose;
+  let result;
+  if (randomNumber <= 1) {
+    computerchoose = 'Bat';
+  } else if (randomNumber <= 2) {
+    computerchoose = 'Ball';
+  } else {
+    computerchoose = 'Stump';
+  }
+  if (computerchoose === 'Stump') {
+    result = 'IT\'S A TIE';
+  } else if (computerchoose === 'Ball') {
+    result = 'COMPUTER IS WINNER';
+  } else {
+    result = 'USER IS WINNER';
+  }
+  document.querySelector('#result').textContent = 
+  'You chose Stump.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
+
+
+
+  // alert('You chose Stump.\nComputer chose: ' + computerchoose + '\nResult: ' + result);
+}">Stump</button>
+<p id="result" ></p>
+</body>
+</html>
