@@ -10,7 +10,8 @@
 
 <h1><strong>Bat Ball Stump Game</strong></h1>
 <br>
-
+  
+<!-- bat ke liye -->
 <button class="bat" onclick="{
   const randomNumber = Math.random() * 3;
   let computerchoose;
@@ -31,12 +32,9 @@
   }
   document.querySelector('#result').textContent = 
   'You chose Bat.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
-
-
-
-  // alert('You chose Bat.\nComputer chose: ' + computerchoose + '\nResult: ' + result);
 }">Bat</button>
 
+<!--   ball ke liye -->
 <button class="ball" onclick="{
   const randomNumber = Math.random() * 3;
   let computerchoose;
@@ -57,15 +55,11 @@
   }
 document.querySelector('#result').textContent = 
   'You chose Ball.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
-
-
-
-
-
-  // alert('You chose Ball.\nComputer chose: ' + computerchoose + '\nResult: ' + result);
  }">Ball</button>
 
-<button class="stump" onclick="{
+  
+<!--   stump ke liye -->
+  <button class="stump" onclick="{
   const randomNumber = Math.random() * 3;
   let computerchoose;
   let result;
@@ -85,11 +79,8 @@ document.querySelector('#result').textContent =
   }
   document.querySelector('#result').textContent = 
   'You chose Stump.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
-
-
-
-  // alert('You chose Stump.\nComputer chose: ' + computerchoose + '\nResult: ' + result);
 }">Stump</button>
+  
 <p id="result" ></p>
 </body>
 </html>
