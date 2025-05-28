@@ -4,15 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cricket Game</title>
- <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
-<h1><strong>Bat Ball Stump Game</strong></h1>
-<br>
-  
-<!-- bat ke liye -->
-<button class="bat" onclick="{
+<h1><strong>Bat Ball Stump Game</strong></h1><br>
+
+<button class="bat" onclick="Loader(() => {
   const randomNumber = Math.random() * 3;
   let computerchoose;
   let result;
@@ -31,11 +30,10 @@
     result = 'COMPUTER IS WINNER';
   }
   document.querySelector('#result').textContent = 
-  'You chose Bat.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
-}">Bat</button>
+    'You chose Bat.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
+})">Bat</button>
 
-<!--   ball ke liye -->
-<button class="ball" onclick="{
+<button class="ball" onclick="Loader(() => {
   const randomNumber = Math.random() * 3;
   let computerchoose;
   let result;
@@ -53,13 +51,11 @@
   } else {
     result = 'USER IS WINNER';
   }
-document.querySelector('#result').textContent = 
-  'You chose Ball.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
- }">Ball</button>
+  document.querySelector('#result').textContent = 
+    'You chose Ball.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
+})">Ball</button>
 
-  
-<!--   stump ke liye -->
-  <button class="stump" onclick="{
+<button class="stump" onclick="Loader(() => {
   const randomNumber = Math.random() * 3;
   let computerchoose;
   let result;
@@ -78,9 +74,27 @@ document.querySelector('#result').textContent =
     result = 'USER IS WINNER';
   }
   document.querySelector('#result').textContent = 
-  'You chose Stump.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
-}">Stump</button>
-  
-<p id="result" ></p>
+    'You chose Stump.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
+})">Stump</button>
+
+<div class="loader-container">
+  <div id="loader"></div>
+</div>
+
+<p id="result"></p>
+
+<script>
+  function Loader(callback) {
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("result").style.display = "none";
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("result").style.display = "block";
+      callback();
+    }, 1000);
+  }
+</script>
+
 </body>
 </html>
+
