@@ -10,7 +10,7 @@
 <body>
 
 <h1><strong>Bat Ball Stump Game</strong></h1><br>
-
+<!-- bat ke liye -->
 <button class="bat" onclick="Loader(() => {
   const randomNumber = Math.random() * 3;
   let computerchoose;
@@ -32,6 +32,8 @@
   document.querySelector('#result').textContent = 
     'You chose Bat.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
 })">Bat</button>
+
+<!-- ball ke liye -->
 
 <button class="ball" onclick="Loader(() => {
   const randomNumber = Math.random() * 3;
@@ -55,6 +57,8 @@
     'You chose Ball.\nComputer chose: ' + computerchoose + '\nResult: ' + result;
 })">Ball</button>
 
+
+<!-- stump ke liye -->
 <button class="stump" onclick="Loader(() => {
   const randomNumber = Math.random() * 3;
   let computerchoose;
@@ -80,9 +84,7 @@
 <div class="loader-container">
   <div id="loader"></div>
 </div>
-
-<p id="result"></p>
-
+<!-- loader ke liye -->
 <script>
   function Loader(callback) {
     document.getElementById("loader").style.display = "block";
@@ -93,8 +95,10 @@
       callback();
     }, 1000);
   }
-</script>
 
+
+ 
+</script>
+ <p id="result"></p>
 </body>
 </html>
-
